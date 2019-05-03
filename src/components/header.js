@@ -13,8 +13,6 @@ import {
   DropdownItem,
 } from "reactstrap"
 
-import Logo from "../images/logo.png"
-
 class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -32,21 +30,25 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="white" light expand="md">
+        <Navbar color="primary" light expand="md" className="navbar">
           <NavbarBrand href="/">
-            <img src={Logo} />
+            <h3 style={{ color: "#ffffff" }}>Codewit</h3>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink href="/components/" id="link">
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">About us</NavLink>
+                <NavLink href="/" id="link">
+                  About us
+                </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
+                <DropdownToggle nav caret id="link">
                   Courses
                 </DropdownToggle>
                 <DropdownMenu right>
@@ -56,6 +58,24 @@ class Header extends React.Component {
                   <DropdownItem>Python</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+
+              <NavItem>
+                <NavLink href="/" id="link">
+                  Apply
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/" id="link">
+                  Hire developers
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/" id="link">
+                  Insight
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
