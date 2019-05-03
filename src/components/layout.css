@@ -38,6 +38,7 @@ body {
 }
 
 .sectiontext {
-  padding: 10px;
   color: #ffffff;
+  padding-left: 40px;
+  padding-right: 40px;
 }
