@@ -76,6 +76,12 @@ class Header extends React.Component {
                   Insight
                 </NavLink>
               </NavItem>
+
+              <NavItem>
+                <NavLink href="/" id="link">
+                  Clubs
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
