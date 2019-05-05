@@ -65,7 +65,9 @@ const CoursesOther = () => {
                 You get to work on real projects and solve real community
                 projects with the knowledge acquired.
               </p>
-              <MDBBtn color="primary">APPLY NOW!</MDBBtn>
+              <MDBBtn color="primary" href="/apply">
+                APPLY NOW!
+              </MDBBtn>
             </MDBCol>
           </MDBRow>
         </MDBCol>
