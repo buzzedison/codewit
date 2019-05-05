@@ -6,7 +6,7 @@ import "mdbreact/dist/css/mdb.css"
 import Layout from "../components/layout"
 import Intro from "../components/intro"
 import Features from "../components/features"
-
+import Summer from "../components/summer"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -16,6 +16,7 @@ const IndexPage = () => (
     <div>
       <Intro />
       <Features />
+      <Summer />
     </div>
   </Layout>
 )
