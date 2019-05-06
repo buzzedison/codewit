@@ -2,9 +2,12 @@ import React from "react"
 
 import Layout from "../components/layout"
 import CodewitApply from "../components/codewitapply"
+import SEO from "../components/seo"
 const Courses = () => {
   return (
     <Layout>
+      <SEO title="Apply" keywords={[`Codewit`, `Code school`, `programming`]} />
+
       <div>
         <h2
           style={{
