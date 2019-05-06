@@ -97,10 +97,15 @@ class CollegeForm extends React.Component {
                           <select
                             className="browser-default custom-select"
                             onChange={this.handleChange}
+                            name="select"
                           >
                             <option>When can you attend?</option>
-                            <option value="1"name="june">June, 2019</option>
-                            <option value="2"name="july">July, 2019</option>
+                            <option value="1" name="june">
+                              June, 2019
+                            </option>
+                            <option value="2" name="july">
+                              July, 2019
+                            </option>
                           </select>
                         </div>
                         <div className="text-center mt-4">
