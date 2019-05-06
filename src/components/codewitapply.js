@@ -1,72 +1,114 @@
 import React from "react"
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact"
+import NetlifyForm from "react-netlify-form"
 
-const CodewitApply = () => {
-  return (
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol md="6">
-          <form
-            name="codewit school registration"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            action="/success"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p className="h4 text-center mb-4">Sign up</p>
-            <label htmlFor="defaultFormRegisterNameEx" className="grey-text">
-              Your name
-            </label>
-            <input
-              type="text"
-              id="defaultFormRegisterNameEx"
-              className="form-control"
-            />
-            <br />
-            <label htmlFor="defaultFormRegisterEmailEx" className="grey-text">
-              Your email
-            </label>
-            <input
-              type="email"
-              id="defaultFormRegisterEmailEx"
-              className="form-control"
-            />
-            <br />
-            <label htmlFor="defaultFormRegisterConfirmEx" className="grey-text">
-              Confirm your email
-            </label>
-            <input
-              type="email"
-              id="defaultFormRegisterConfirmEx"
-              className="form-control"
-            />
-            <br />
-            <label htmlFor="phonenumber" className="grey-text">
-              Phone Number
-            </label>
-            <input type="number" id="phonenumber" className="form-control" />
-            <br />
+class CodewitApply extends React.Component {
+  render() {
+    return (
+      <div>
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol md="6">
+              <NetlifyForm
+                name="Codewit registration"
+                onSubmit={this.handleSubmit}
+              >
+                {({ loading, error, success }) => (
+                  <div>
+                    {loading && <div>Loading...</div>}
+                    {error && (
+                      <div>
+                        Your information was not sent. Please try again later.
+                      </div>
+                    )}
+                    {success && <div>Thank you for contacting us!</div>}
+                    {!loading && !success && (
+                      <div>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p className="h4 text-center mb-4">Sign up</p>
+                        <label
+                          htmlFor="defaultFormRegisterNameEx"
+                          className="grey-text"
+                        >
+                          Your name
+                        </label>
+                        <input
+                          type="text"
+                          id="defaultFormRegisterNameEx"
+                          className="form-control"
+                          onChange={this.handleChange}
+                          required
+                        />
+                        <br />
+                        <label
+                          htmlFor="defaultFormRegisterEmailEx"
+                          className="grey-text"
+                        >
+                          Your email
+                        </label>
+                        <input
+                          type="email"
+                          id="defaultFormRegisterEmailEx"
+                          className="form-control"
+                          onChange={this.handleChange}
+                          required
+                        />
+                        <br />
+                        <label
+                          htmlFor="defaultFormRegisterConfirmEx"
+                          className="grey-text"
+                        >
+                          Confirm your email
+                        </label>
+                        <input
+                          type="email"
+                          id="defaultFormRegisterConfirmEx"
+                          className="form-control"
+                          onChange={this.handleChange}
+                        />
+                        <br />
+                        <label htmlFor="phonenumber" className="grey-text">
+                          Phone Number
+                        </label>
+                        <input
+                          type="number"
+                          id="phonenumber"
+                          className="form-control"
+                          onChange={this.handleChange}
+                          required
+                        />
+                        <br />
 
-            <label htmlFor="defaultFormContactMessageEx" className="grey-text">
-              Why do you want to attend Codewit Code School?
-            </label>
-            <textarea
-              type="text"
-              id="defaultFormContactMessageEx"
-              className="form-control"
-              rows="3"
-            />
-            <div className="text-center mt-4">
-              <MDBBtn color="unique" type="submit">
-                APPLY NOW
-              </MDBBtn>
-            </div>
-          </form>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-  )
+                        <label
+                          htmlFor="defaultFormContactMessageEx"
+                          className="grey-text"
+                        >
+                          Why do you want to attend Codewit Code School?
+                        </label>
+                        <textarea
+                          type="text"
+                          id="defaultFormContactMessageEx"
+                          className="form-control"
+                          rows="3"
+                          onChange={this.handleChange}
+                          required
+                        />
+                        <div className="text-center mt-4">
+                          <MDBBtn color="unique" type="submit">
+                            APPLY NOW
+                          </MDBBtn>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </NetlifyForm>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </div>
+    )
+  }
 }
 
 export default CodewitApply
