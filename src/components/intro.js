@@ -45,7 +45,7 @@ const Intro = () => {
               </MDBCardText>
               <hr className="my-4" />
               <div className="pt-2">
-                <MDBBtn color="primary" className="waves-effect">
+                <MDBBtn color="primary" className="waves-effect" href="/apply">
                   APPLY NOW <MDBIcon far icon="gem" />
                 </MDBBtn>
                 <MDBBtn color="dark" className="waves-effect">

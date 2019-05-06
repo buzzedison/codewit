@@ -44,7 +44,7 @@ const Summer = () => {
               Classroom lessons. Once or twice per week.{" "}
               <strong> June or July</strong>
             </p>
-            <MDBBtn color="primary" size="sm">
+            <MDBBtn color="primary" size="sm" href="/kids">
               <MDBIcon far icon="clone" className="left" /> REGISTER NOW!
             </MDBBtn>
           </MDBCardBody>
@@ -64,7 +64,7 @@ const Summer = () => {
               Kumasi and Takoradi to take our on campus courses. You can attend
               for free. Guranteed jobs available.
             </p>
-            <MDBBtn color="primary" size="sm">
+            <MDBBtn color="primary" size="sm" href="/apply">
               <MDBIcon far icon="clone" className="left" /> APPLY NOW
             </MDBBtn>
           </MDBCardBody>
@@ -85,7 +85,7 @@ const Summer = () => {
               students. Runs for 4 weeks. Get internship placements, and job
               opportunities.
             </p>
-            <MDBBtn color="primary" size="sm">
+            <MDBBtn color="primary" size="sm" href="/colleges">
               <MDBIcon far icon="clone" className="left" /> APPLY NOW !
             </MDBBtn>
           </MDBCardBody>

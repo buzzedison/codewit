@@ -25,7 +25,7 @@ const Features = () => {
                 Take our online courses at your convenience. Specially designed
                 for busy people.
               </p>
-              <MDBBtn color="dark" size="sm">
+              <MDBBtn color="dark" size="sm" href="/courses">
                 BROWSE COURSES
               </MDBBtn>
             </MDBCol>
