@@ -10,7 +10,10 @@ const CodewitApply = () => {
             name="codewit school registration"
             method="POST"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/success"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <p className="h4 text-center mb-4">Sign up</p>
             <label htmlFor="defaultFormRegisterNameEx" className="grey-text">
               Your name
@@ -39,6 +42,12 @@ const CodewitApply = () => {
               className="form-control"
             />
             <br />
+            <label htmlFor="phonenumber" className="grey-text">
+              Phone Number
+            </label>
+            <input type="number" id="phonenumber" className="form-control" />
+            <br />
+
             <label htmlFor="defaultFormContactMessageEx" className="grey-text">
               Why do you want to attend Codewit Code School?
             </label>
