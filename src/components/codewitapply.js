@@ -39,6 +39,7 @@ class CodewitApply extends React.Component {
                           type="text"
                           id="defaultFormRegisterNameEx"
                           className="form-control"
+                          name="name"
                           onChange={this.handleChange}
                           required
                         />
@@ -53,6 +54,7 @@ class CodewitApply extends React.Component {
                           type="email"
                           id="defaultFormRegisterEmailEx"
                           className="form-control"
+                          name="email"
                           onChange={this.handleChange}
                           required
                         />
@@ -77,6 +79,7 @@ class CodewitApply extends React.Component {
                           type="number"
                           id="phonenumber"
                           className="form-control"
+                          name="phonenumber"
                           onChange={this.handleChange}
                           required
                         />
@@ -92,6 +95,7 @@ class CodewitApply extends React.Component {
                           type="text"
                           id="defaultFormContactMessageEx"
                           className="form-control"
+                          name="message"
                           rows="3"
                           onChange={this.handleChange}
                           required
