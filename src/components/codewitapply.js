@@ -28,12 +28,6 @@ class CodewitApply extends React.Component {
                     )}
                     {!loading && !success && (
                       <div>
-                        <input
-                          type="hidden"
-                          name="contact"
-                          value="contact"
-                          className="form-control"
-                        />
                         <p className="h4 text-center mb-4">Sign up</p>
                         <label
                           htmlFor="defaultFormRegisterNameEx"
