@@ -7,8 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink,
- 
 } from "reactstrap"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
 class Header extends React.Component {
   constructor(props) {
@@ -25,6 +26,13 @@ class Header extends React.Component {
     })
   }
   render() {
+    const Button = styled.a`
+      display: inline-block;
+      background: transparent;
+      color: white;
+      padding: 10px;
+      border: 1px solid white;
+    `
     return (
       <div>
         <Navbar color="primary" light expand="md" className="navbar">
@@ -77,6 +85,13 @@ class Header extends React.Component {
                   Clubs
                 </NavLink>
               </NavItem>
+
+              <Button>
+                {" "}
+                <Link to="/account" style={{ color: "white" }}>
+                  Login/Sign up
+                </Link>
+              </Button>
             </Nav>
           </Collapse>
         </Navbar>

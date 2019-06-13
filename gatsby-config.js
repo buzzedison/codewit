@@ -36,8 +36,16 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `ms0ab2s1zclg`,
-      
+
         accessToken: `1NNomTOZP688MaAvdyGYDXYu44IKog__hP0IierSiEM`,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-126699036-1",
       },
     },
   ],
